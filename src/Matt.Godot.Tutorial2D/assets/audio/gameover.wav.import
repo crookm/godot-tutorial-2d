@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3ea7f315717070b3d2d772435937adcac6d4e59bc3c6b80addf9eddbd74aec5c
-size 495
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cau1ruj8nn5y2"
+path="res://.godot/imported/gameover.wav-546a15a96bb084cfc19f83814eb1fd18.sample"
+
+[deps]
+
+source_file="res://assets/audio/gameover.wav"
+dest_files=["res://.godot/imported/gameover.wav-546a15a96bb084cfc19f83814eb1fd18.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

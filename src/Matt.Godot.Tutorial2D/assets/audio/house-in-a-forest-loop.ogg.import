@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b29fe12ea272e05f5efad4e8a65cb0fba3950eb20c24ba42caf3f4f218f5e76
-size 435
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://btmpvr5r2u5va"
+path="res://.godot/imported/house-in-a-forest-loop.ogg-9907639be44c6db4c53f004c1c55a064.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/house-in-a-forest-loop.ogg"
+dest_files=["res://.godot/imported/house-in-a-forest-loop.ogg-9907639be44c6db4c53f004c1c55a064.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
