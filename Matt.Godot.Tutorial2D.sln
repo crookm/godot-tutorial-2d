@@ -1,0 +1,24 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matt.Godot.Tutorial2D", "src\Matt.Godot.Tutorial2D\Matt.Godot.Tutorial2D.csproj", "{33EA62C3-D996-473E-9333-6B988476AF76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{64A7330B-3C23-40EA-8B21-3DC3AF8EAD5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33EA62C3-D996-473E-9333-6B988476AF76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33EA62C3-D996-473E-9333-6B988476AF76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33EA62C3-D996-473E-9333-6B988476AF76}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{33EA62C3-D996-473E-9333-6B988476AF76}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{33EA62C3-D996-473E-9333-6B988476AF76}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{33EA62C3-D996-473E-9333-6B988476AF76}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{33EA62C3-D996-473E-9333-6B988476AF76} = {64A7330B-3C23-40EA-8B21-3DC3AF8EAD5A}
+	EndGlobalSection
+EndGlobal
