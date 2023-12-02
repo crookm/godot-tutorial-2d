@@ -1,3 +1,4 @@
-src/Matt.Godot.Tutorial2D/assets/audio/* filter=lfs diff=lfs merge=lfs -text
+src/Matt.Godot.Tutorial2D/assets/audio/*.ogg filter=lfs diff=lfs merge=lfs -text
+src/Matt.Godot.Tutorial2D/assets/audio/*.wav filter=lfs diff=lfs merge=lfs -text
 src/Matt.Godot.Tutorial2D/assets/fonts/*.ttf filter=lfs diff=lfs merge=lfs -text
-src/Matt.Godot.Tutorial2D/assets/sprites/* filter=lfs diff=lfs merge=lfs -text
+src/Matt.Godot.Tutorial2D/assets/sprites/*.png filter=lfs diff=lfs merge=lfs -text
