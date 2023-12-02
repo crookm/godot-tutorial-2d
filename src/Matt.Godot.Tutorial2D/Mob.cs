@@ -16,6 +16,9 @@ public partial class Mob : RigidBody2D
 	{
 	}
 
+	/// <summary>
+	/// Remove a mob when it exits the screen.
+	/// </summary>
 	private void OnVisibleOnScreenNotifier2DScreenExited()
 	{
 		// Deletes the node and its children at the end of the frame, after all deferred updates

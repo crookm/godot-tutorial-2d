@@ -54,6 +54,10 @@ public partial class Player : Area2D
             y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y));
     }
 
+    /// <summary>
+    /// Setup the player to begin the game.
+    /// </summary>
+    /// <param name="position">Where to place the player</param>
     public void Start(Vector2 position)
     {
         Position = position;
@@ -62,6 +66,10 @@ public partial class Player : Area2D
         GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
     }
 
+    /// <summary>
+    /// Handle when a body collides with the player (i.e., a mob).
+    /// </summary>
+    /// <param name="body">The body which collided with the player</param>
     private void OnBodyEntered(Node2D body)
     {
         Hide();
