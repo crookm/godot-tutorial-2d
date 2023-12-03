@@ -28,21 +28,29 @@ public partial class Main : Node
 
         player.Start(startPos.Position);
         GetNode<Timer>("StartTimer").Start();
+
+        var hud = GetNode<HUD>("HUD");
+        hud.UpdateScore(_score);
+        hud.ShowMessage("Get ready!");
     }
 
     /// <summary>
     /// End the game when hit by an enemy.
     /// </summary>
-    private void GameOver()
+    /// <remarks>
+    /// Conventionally, <c>async void</c> is forbidden in C# - however an exception is granted to event handlers, as in this case here.
+    /// </remarks>
+    private async void GameOver()
     {
         GetNode<Timer>("MobTimer").Stop();
         GetNode<Timer>("ScoreTimer").Stop();
+        await GetNode<HUD>("HUD").ShowGameOver();
     }
 
     /// <summary>
     /// Each time the score timer elapses (each second), we increment the score.
     /// </summary>
-    private void OnScoreTimerTimeout() => _score++;
+    private void OnScoreTimerTimeout() => GetNode<HUD>("HUD").UpdateScore(++_score);
 
     /// <summary>
     /// After a few seconds grace period, the game begins.
@@ -58,7 +66,11 @@ public partial class Main : Node
     /// </summary>
     private void OnMobTimerTimeout()
     {
-        if (MobScene is null) return;
+        if (MobScene is null)
+        {
+            GD.PrintErr("MobScene input was null, unable to spawn a mob");
+            return;
+        }
 
         var mob = MobScene.Instantiate<Mob>();
 

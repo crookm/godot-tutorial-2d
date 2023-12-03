@@ -37,6 +37,8 @@ public partial class HUD : CanvasLayer
         message.Text = "Dodge the creeps!";
         message.Show();
 
+        // Wait a brief moment before showing the start button using an inline timer "for effect"?
+        // > Was in the tutorial and I don't really care for it, but keeping it for future reference.
         await ToSignal(GetTree().CreateTimer(1.0), SceneTreeTimer.SignalName.Timeout);
         GetNode<Button>("StartButton").Show();
     }
@@ -45,7 +47,7 @@ public partial class HUD : CanvasLayer
     /// Shows a message on the HUD for a short while.
     /// </summary>
     /// <param name="text">The message to display</param>
-    private void ShowMessage(string text)
+    public void ShowMessage(string text)
     {
         var message = GetNode<Label>("Message");
         message.Text = text;
