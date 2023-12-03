@@ -28,7 +28,6 @@ public partial class Main : Node
         // > Groups help manage nodes en-mass
         GetTree().CallGroup("mobs", Node.MethodName.QueueFree);
 
-        player.Start(startPos.Position);
         GetNode<Timer>("StartTimer").Start();
 
         var hud = GetNode<HUD>("HUD");
@@ -59,6 +58,10 @@ public partial class Main : Node
     /// </summary>
     private void OnStartTimerTimeout()
     {
+        var player = GetNode<Player>("Player");
+        var startPos = GetNode<Marker2D>("StartPosition");
+        player.Start(startPos.Position);
+
         GetNode<Timer>("MobTimer").Start();
         GetNode<Timer>("ScoreTimer").Start();
     }
