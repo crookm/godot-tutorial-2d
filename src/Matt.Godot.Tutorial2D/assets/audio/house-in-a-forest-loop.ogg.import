@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/house-in-a-forest-loop.ogg-9907639be44c6db4c5
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

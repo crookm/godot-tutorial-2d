@@ -33,6 +33,8 @@ public partial class Main : Node
         var hud = GetNode<HUD>("HUD");
         hud.UpdateScore(_score);
         hud.ShowMessage("Get ready!");
+        
+        GetNode<AudioStreamPlayer>("Music").Play();
     }
 
     /// <summary>
@@ -45,6 +47,10 @@ public partial class Main : Node
     {
         GetNode<Timer>("MobTimer").Stop();
         GetNode<Timer>("ScoreTimer").Stop();
+
+        GetNode<AudioStreamPlayer>("Music").Stop();
+        GetNode<AudioStreamPlayer>("DeathSound").Play();
+
         await GetNode<HUD>("HUD").ShowGameOver();
     }
 
