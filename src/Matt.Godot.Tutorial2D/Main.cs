@@ -23,8 +23,10 @@ public partial class Main : Node
     {
         _score = 0;
 
-        var player = GetNode<Player>("Player");
-        var startPos = GetNode<Marker2D>("StartPosition");
+        // Clear out any remaining mobs on the screen
+        // > Groups are created in the same place as signals are connected
+        // > Groups help manage nodes en-mass
+        GetTree().CallGroup("mobs", Node.MethodName.QueueFree);
 
         player.Start(startPos.Position);
         GetNode<Timer>("StartTimer").Start();
